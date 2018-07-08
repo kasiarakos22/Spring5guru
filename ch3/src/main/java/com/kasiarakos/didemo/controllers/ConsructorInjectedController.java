@@ -1,15 +1,19 @@
 package com.kasiarakos.didemo.controllers;
 
 import com.kasiarakos.didemo.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConsructorInjectedController {
     private GreetingService greetingService;
 
-    public ConsructorInjectedController(GreetingService greetingService) {
+
+    public ConsructorInjectedController( @Qualifier("greetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
-    String sayHello(){
+    public String sayHello(){
         return greetingService.sayGreeting();
     }
 }

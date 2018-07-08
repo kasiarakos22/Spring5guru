@@ -1,12 +1,18 @@
 package com.kasiarakos.didemo.controllers;
 
-import com.kasiarakos.didemo.services.GreetingServiceImpl;
+import com.kasiarakos.didemo.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class PropertyInjectedController {
 
-    public GreetingServiceImpl greetingService;
+    @Autowired
+    @Qualifier("greetingServiceImple2")
+    public GreetingService greetingService;
 
-    String sayHello(){
+    public String sayHello(){
         return greetingService.sayGreeting();
     }
 
