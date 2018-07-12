@@ -10,14 +10,14 @@ public class FakeDatasource {
     private String username;
     private String password;
     private String url;
+    private String javaHome;
 
-    @Override
-    public String toString() {
-        return "FakeDatasource{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", url='" + url + '\'' +
-                '}';
+    public String getJavaHome() {
+        return javaHome;
+    }
+
+    public void setJavaHome(String javaHome) {
+        this.javaHome = javaHome;
     }
 
     public String getUsername() {
@@ -42,5 +42,15 @@ public class FakeDatasource {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "FakeDatasource{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", url='" + url + '\'' +
+                ", javaHome='" + javaHome + '\'' +
+                '}';
     }
 }
