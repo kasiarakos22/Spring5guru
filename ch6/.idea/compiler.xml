@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="di-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="di-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="EclipseCompilerSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-deprecation -g -encoding ISO-8859-1 -warn:-allDeadCode,allDeprecation,allJavadoc,all-static-method,assertIdentifier,boxing,deprecation,emptyBlock,enumIdentifier,enumSwitch,enumSwitchPedantic,fallthrough,fieldHiding,includeAssertNull,indirectStatic,javadoc,localHiding,nls,null,nullAnnot,over-ann,raw,resource,serial,specialParamHiding,static-method,staticReceiver,super,switchDefault,syntheticAccess,unavoidableGenericProblems,unchecked,unqualifiedField,unusedAllocation,unusedArgument,unusedTypeArgs -err:allOver-ann,charConcat,compareIdentical,conditionAssign,constructorName,deadCode,dep-ann,discouraged,finalBound,finally,forbidden,hashCode,intfAnnotation,intfNonInherited,intfRedundant,maskedCatchBlock,noEffectAssign,nullDereference,paramAssign,pkgDefaultMethod,semicolon,suppress,syncOverride,typeHiding,unnecessaryElse,unusedImport,unusedLabel,unusedLocal,unusedPrivate,unusedThrown,uselessTypeCheck,varargsCast,warningToken" />
+  </component>
+</project>
