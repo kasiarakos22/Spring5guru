@@ -18,11 +18,14 @@ public class PropertyConfig {
     @Value("${guru.dburl}")
     String url;
 
+    @Value("${java.home}")
+    String javaHome;
+
     @Bean
     public FakeDatasource fakeDatasource(){
         FakeDatasource fakeDatasource = new FakeDatasource();
         fakeDatasource.setPassword(password);
-        fakeDatasource.setUrl(url);
+        fakeDatasource.setUrl(javaHome);
         fakeDatasource.setUser(user);
         return fakeDatasource;
     }

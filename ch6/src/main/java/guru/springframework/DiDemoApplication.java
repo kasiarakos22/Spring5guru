@@ -14,5 +14,6 @@ public class DiDemoApplication {
 
 		FakeDatasource fakeDatasource = ctx.getBean(FakeDatasource.class);
 		System.out.println(fakeDatasource.getUser());
+		System.out.println(fakeDatasource.getUrl());
 	}
 }
