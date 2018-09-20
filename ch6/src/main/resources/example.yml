@@ -1,0 +1,23 @@
+# this is a comment
+
+name: Dimitris
+names:
+  - Dimitris
+  - Sofia
+  - Nefeli
+
+books:
+  author: Dimitris
+  oublisher: Sofia
+
+include_new_lines: |
+sadasd
+sadas
+das
+dasdas
+
+ignore new lines: >
+asdsa
+asd
+asd
+asdasas
