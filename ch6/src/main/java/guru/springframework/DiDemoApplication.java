@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import guru.springframework.examplebeans.FakeDatasource;
+import guru.springframework.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -15,5 +16,7 @@ public class DiDemoApplication {
 		FakeDatasource fakeDatasource = ctx.getBean(FakeDatasource.class);
 		System.out.println(fakeDatasource.getUser());
 		System.out.println(fakeDatasource.getUrl());
+		FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
+		System.out.println(fakeJmsBroker.getUsername());
 	}
 }
