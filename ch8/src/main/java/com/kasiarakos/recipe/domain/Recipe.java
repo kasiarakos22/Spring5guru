@@ -1,5 +1,7 @@
 package com.kasiarakos.recipe.domain;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,9 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    private Set<Ingendient> ingendients;
     @Lob
     private Byte[] image;
 
