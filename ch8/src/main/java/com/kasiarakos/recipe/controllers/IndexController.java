@@ -1,33 +1,23 @@
 package com.kasiarakos.recipe.controllers;
 
-import java.util.Optional;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.kasiarakos.recipe.domain.Category;
-import com.kasiarakos.recipe.domain.UnitOfMeasure;
-import com.kasiarakos.recipe.repositories.CategoryRepository;
-import com.kasiarakos.recipe.repositories.UnitOfMeasureRepository;
+import com.kasiarakos.recipe.services.RecipeService;
 
 @Controller
 public class IndexController {
 
-    private final CategoryRepository categoryRepository;
-    private final UnitOfMeasureRepository unitOfMeasureRepository;
+    private final RecipeService recipeService;
 
-    public IndexController(CategoryRepository categoryRepository, UnitOfMeasureRepository unitOfMeasureRepository) {
-        this.categoryRepository = categoryRepository;
-        this.unitOfMeasureRepository = unitOfMeasureRepository;
+    public IndexController(RecipeService recipeService) {
+        this.recipeService = recipeService;
     }
 
     @RequestMapping({"/", "", "/index"})
-    public String index(){
-        Optional<Category> category = categoryRepository.findByDescription("Greek");
-        Optional<UnitOfMeasure> unitOfMeasure = unitOfMeasureRepository.findByDescription("Tea spoon");
-        System.out.println("category is "+category.get());
-        System.out.println("Unit of Measure is "+unitOfMeasure.get());
-
+    public String index(Model model) {
+        model.addAttribute("recipes", recipeService.getRecipes());
         return "index";
     }
 }
